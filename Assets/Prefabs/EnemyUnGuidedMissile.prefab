@@ -4867,7 +4867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0056ff35b71a86845b4b0dea6bacdd46, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -49.09
+      value: -63.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0056ff35b71a86845b4b0dea6bacdd46, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4938,7 +4938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20a175ac8ada6f4486b9bf6197b6534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MissileMovingSpeed: 95
+  target: {fileID: 0}
+  speed: 90
+  rotationSpeed: 150
 --- !u!114 &1483852254859759051
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class UnguidedMissileController : MonoBehaviour
 {
-    [SerializeField] float MissileMovingSpeed = 50.0f;
-    void Start()
-    {
-        
-    }
+    public Transform target; // ????, ? ??????? ?????? ????? ??????
+    public float speed = 5f; // ???????? ???????? ??????
+    public float rotationSpeed = 200f; // ???????? ???????? ??????
 
-    // Update is called once per frame
+    private float speedCoefficient = 2.0f;
+
     void Update()
     {
-        transform.Translate(Vector3.forward * MissileMovingSpeed * Time.deltaTime);
-        MissileMovingSpeed += 2.0f * Time.deltaTime;
+        if (target != null)
+        {
+            Vector3 direction = target.position - transform.position; // ??????????? ? ????
+
+            // ??????? ? ????
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
+
+            // ???????? ? ????
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+            speed += speedCoefficient * Time.deltaTime;
+        }
     }
 }

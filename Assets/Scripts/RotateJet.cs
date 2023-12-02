@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotateJet : MonoBehaviour
 {
-    private float tiltValue = 30.0f;
+    private float tiltValue = 10.0f;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
