@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JetPlayer : MonoBehaviour
 {
+    [SerializeField] GameObject RestartPanel;
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent<UnguidedMissile>(out var unguidedMissile))
@@ -11,6 +12,7 @@ public class JetPlayer : MonoBehaviour
             Debug.Log("Game Over!");
             Destroy(other.gameObject);
             Destroy(gameObject);
+            RestartPanel.SetActive(true);
         }
     }
 }
