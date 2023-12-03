@@ -5,7 +5,8 @@ public class RocketPool : MonoBehaviour
 {
     public GameObject rocketPrefab;
     public int poolSize = 10;
-    public float spawnRadius = 5f;
+    public float spawnRadius1 = 5f;
+    public float spawnRadius2 = 10f;
     public Transform playerTransform;
 
     private List<GameObject> rocketPool = new List<GameObject>();
@@ -24,11 +25,15 @@ public class RocketPool : MonoBehaviour
     {
         foreach (GameObject rocket in rocketPool)
         {
-            if (!rocket.activeInHierarchy)
+            if(rocket != null)
             {
-                return rocket;
+                if (!rocket.activeInHierarchy)
+                {
+                    return rocket;
+                }
             }
         }
+
 
         GameObject newRocket = Instantiate(rocketPrefab);
         newRocket.SetActive(false);
@@ -38,12 +43,29 @@ public class RocketPool : MonoBehaviour
 
     public void SpawnRocket()
     {
-        Vector2 randomOffset = Random.insideUnitCircle.normalized * spawnRadius;
-        Vector3 spawnPosition = playerTransform.position + new Vector3(randomOffset.x, 0f, randomOffset.y);
+        // ???????? ????????? ?????? ????? R1 ? R2
+        float randomRadius = Random.Range(spawnRadius1, spawnRadius2);
+
+        // ???????? ????????? ???? ?????? ?????? ??????
+        float randomAngle = Random.Range(0f, 2f * Mathf.PI);
+
+        // ????????? ????????? ????? ?????? ????????? ???????
+        float spawnX = playerTransform.position.x + randomRadius * Mathf.Cos(randomAngle);
+        float spawnZ = playerTransform.position.z + randomRadius * Mathf.Sin(randomAngle);
+        Vector3 spawnPosition = new Vector3(spawnX, playerTransform.position.y, spawnZ);
 
         GameObject rocket = GetRocketFromPool();
-        rocket.transform.position = spawnPosition;
-        rocket.GetComponent<UnguidedMissileController>().target = playerTransform;
-        rocket.SetActive(true);
+
+        if (rocket != null)
+        {
+            rocket.transform.position = spawnPosition;
+            rocket.GetComponent<UnguidedMissileController>().target = playerTransform;
+            rocket.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("??? ????????? ????? ? ????.");
+            // ? ???? ??????, ??? ?????? ?????? ?????? ? ??? ????????? ?????, ??????? ?????????? ?????? ?? ?????.
+        }
     }
 }

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f15309f12d62244814b6b18810bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerForwardSpeed: 95
+  PlayerForwardSpeed: 30
   PlayerRotationSpeed: 350
 --- !u!65 &5548532238507811803
 BoxCollider:

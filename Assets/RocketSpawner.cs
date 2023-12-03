@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RocketSpawner : MonoBehaviour
 {
-    public float spawnInterval = 50f;
+    public float spawnInterval = 1000f;
     public float spawnRadius = 10f;
     public Transform playerTransform;
     public RocketPool rocketPool;
@@ -28,7 +28,7 @@ public class RocketSpawner : MonoBehaviour
     private void SpawnRocket()
     {
         rocketPool.playerTransform = playerTransform;
-        rocketPool.spawnRadius = spawnRadius;
+        //rocketPool.spawnRadius = spawnRadius;
         rocketPool.SpawnRocket();
     }
 }
