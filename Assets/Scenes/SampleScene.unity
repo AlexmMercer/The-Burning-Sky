@@ -621,9 +621,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketPrefab: {fileID: 6121202512523650782, guid: 2f0a4ae2e42536a4d95f28f5680590a1, type: 3}
-  poolSize: 5
-  spawnRadius1: 55
-  spawnRadius2: 75
+  poolSize: 3
+  spawnRadius1: 30
+  spawnRadius2: 35
   playerTransform: {fileID: 1970981858}
 --- !u!1 &947425077
 GameObject:
@@ -776,7 +776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953713840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1080,7 +1080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -350, y: -216}
+  m_AnchoredPosition: {x: 231, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970337662
@@ -1444,7 +1444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1385104076
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1669,6 +1669,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1492508823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6171530176586952566, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+  m_PrefabInstance: {fileID: 2132102565824535893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1656263613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -263, y: -25}
+  m_AnchoredPosition: {x: -65, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1683504045
@@ -1862,7 +1867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 0 $
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2007,19 +2012,35 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6171530176586952566, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2132102565824535896}
   m_SourcePrefab: {fileID: 100100000, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
 --- !u!114 &2132102565824535894 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
   m_PrefabInstance: {fileID: 2132102565824535893}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1492508823}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9c4ac759ecf44940b78db6f06934b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2132102565824535896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492508823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1bbe7af9d16a194094ef533038b0eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 970337662}
 --- !u!1001 &7259435145442622153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2147,6 +2168,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2822214079742737029, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: GameTimer
+      value: 
+      objectReference: {fileID: 2132102565824535896}
+    - target: {fileID: 2822214079742737029, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: RestartPanel
       value: 
       objectReference: {fileID: 1108302915}
@@ -2162,6 +2187,10 @@ PrefabInstance:
       propertyPath: rocketPool
       value: 
       objectReference: {fileID: 782628377}
+    - target: {fileID: 5814760003130889727, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: spawnInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7819628830520115965, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: PlayerForwardSpeed
       value: 35

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RocketSpawner : MonoBehaviour
 {
-    [SerializeField] float spawnInterval = 300000.0f;
+    [SerializeField] float spawnInterval = 450000.0f;
     public Transform playerTransform;
     public RocketPool rocketPool;
 
@@ -10,7 +10,7 @@ public class RocketSpawner : MonoBehaviour
 
     private void Start()
     {
-        //rocketPool = GetComponent<RocketPool>();
+        SpawnRocket();
     }
 
     private void Update()

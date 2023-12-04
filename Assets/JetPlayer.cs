@@ -8,6 +8,7 @@ public class JetPlayer : MonoBehaviour
     [SerializeField] GameObject RestartPanel;
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
     [SerializeField] GameManager gameManager;
+    [SerializeField] Timer GameTimer;
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent<UnguidedMissile>(out var unguidedMissile))
@@ -16,8 +17,7 @@ public class JetPlayer : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
             RestartPanel.SetActive(true);
-            MissilesDestroyedNumber.text = $"{gameManager.GetDestroyedMissilesNumber()}";
-            gameManager.ResetDestroyedMissilesNumber();
+            GameTimer.HandlePlayerDeath();
         }
     }
 }
