@@ -4847,15 +4847,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0056ff35b71a86845b4b0dea6bacdd46, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.3183591
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0056ff35b71a86845b4b0dea6bacdd46, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.3183591
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0056ff35b71a86845b4b0dea6bacdd46, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.3183591
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0056ff35b71a86845b4b0dea6bacdd46, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4939,8 +4939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1331992575669935514, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
-  speed: 30
-  rotationSpeed: 350
+  speed: 20
+  rotationSpeed: 150
+  speedCoefficient: 2
 --- !u!114 &1483852254859759051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4953,6 +4954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75431107162daf74db37efefa872d360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
 --- !u!65 &1652619928158455025
 BoxCollider:
   m_ObjectHideFlags: 0

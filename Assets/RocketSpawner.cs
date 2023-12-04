@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class RocketSpawner : MonoBehaviour
 {
-    public float spawnInterval = 1000f;
-    public float spawnRadius = 10f;
+    [SerializeField] float spawnInterval = 300000.0f;
     public Transform playerTransform;
     public RocketPool rocketPool;
 
@@ -18,7 +17,7 @@ public class RocketSpawner : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= spawnInterval)
+        if (timer >= 2 * spawnInterval)
         {
             SpawnRocket();
             timer = 0f;

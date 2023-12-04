@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UnguidedMissile : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
     private float missileFuelTime = 20.0f;
     private void OnTriggerEnter(Collider other)
     {
