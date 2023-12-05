@@ -4939,9 +4939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1331992575669935514, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
-  speed: 20
+  speed: 25
   rotationSpeed: 150
-  speedCoefficient: 2
+  speedCoefficient: 3
 --- !u!114 &1483852254859759051
 MonoBehaviour:
   m_ObjectHideFlags: 0
