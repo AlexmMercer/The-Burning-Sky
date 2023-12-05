@@ -2016,6 +2016,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6171530176586952566, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2132102565824535896}
+    - targetCorrespondingSourceObject: {fileID: 6171530176586952566, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2132102565824535898}
+    - targetCorrespondingSourceObject: {fileID: 6171530176586952566, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2132102565824535899}
   m_SourcePrefab: {fileID: 100100000, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
 --- !u!114 &2132102565824535894 stripped
 MonoBehaviour:
@@ -2041,6 +2047,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 970337662}
+--- !u!114 &2132102565824535898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492508823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a6ed9282dac404186bfd69ec307325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinFactory: {fileID: 2132102565824535899}
+  numberOfCoins: 25
+  spawnRadius: 20
+  spawnInterval: 10
+  playerTransform: {fileID: 1970981858}
+--- !u!114 &2132102565824535899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492508823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48471e4b0ac4a34f80291dbea0f06b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 4566871458844494080, guid: 59bfa60f99589b84c9e308e4f49114ba, type: 3}
 --- !u!1001 &7259435145442622153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2182,6 +2218,10 @@ PrefabInstance:
     - target: {fileID: 3048755617885923633, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: m_Name
       value: JetObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814760003130889727, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5814760003130889727, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: rocketPool
