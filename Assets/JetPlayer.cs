@@ -6,6 +6,9 @@ using UnityEngine;
 public class JetPlayer : MonoBehaviour
 {
     [SerializeField] GameObject RestartPanel;
+    [SerializeField] TextMeshProUGUI TimeValText;
+    [SerializeField] TextMeshProUGUI TimerText;
+    [SerializeField] TextMeshProUGUI MoneyValText;
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
     [SerializeField] GameManager gameManager;
     [SerializeField] Timer GameTimer;
@@ -16,6 +19,7 @@ public class JetPlayer : MonoBehaviour
             Debug.Log("Game Over!");
             Destroy(other.gameObject);
             Destroy(gameObject);
+            TimeValText.text = $"Time: {TimerText.text}";
             RestartPanel.SetActive(true);
             GameTimer.HandlePlayerDeath();
         }
