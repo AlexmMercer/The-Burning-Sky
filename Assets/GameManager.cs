@@ -8,11 +8,27 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject RestartPanel;
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
+    public int coinsCollectedPerRound = 0;
     private float missilesDestroyedNumber;
+    private int totalCoinsValue;
     void Start()
     {
         RestartPanel.SetActive(false);
         ResetDestroyedMissilesNumber();
+        coinsCollectedPerRound = 0;
+    }
+
+    public void increaseTotalCoinsValue(int valueToAdd)
+    {
+        int newTotalCoinsValue = PlayerPrefs.GetInt("totalCoinsValue", 0);
+        newTotalCoinsValue += valueToAdd;
+        PlayerPrefs.SetInt("totalCoinsValue", newTotalCoinsValue);
+        //PlayerPrefs.Save();
+    }
+
+    public int getTotalCoinsValue()
+    {
+        return PlayerPrefs.GetInt("totalCoinsValue");
     }
 
     public int GetDestroyedMissilesNumber()

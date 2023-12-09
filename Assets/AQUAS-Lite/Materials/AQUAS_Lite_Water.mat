@@ -78,7 +78,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Density: 0.208
+    - _Density: 0.812
     - _DepthTransparency: 0.2
     - _DetailNormalMapScale: 1
     - _DistanceFade: 0.5
@@ -94,7 +94,7 @@ Material:
     - _FoamContrast: 0.135
     - _FoamIntensity: 1.92
     - _FoamSpeed: 0.1
-    - _FoamTiling: 0.97
+    - _FoamTiling: 0.69
     - _FoamVisibility: 1
     - _FogDistance: 1000
     - _FogFade: 1
@@ -112,7 +112,7 @@ Material:
     - _ProbeReflectionIntensity: 0.376
     - _RealtimeReflectionIntensity: 0.208
     - _ReflectionIntensity: 0.385
-    - _Refraction: 0
+    - _Refraction: 0.183
     - _RefractionDistance: 10
     - _RefractionFalloff: 1
     - _ShoreFade: 0.56

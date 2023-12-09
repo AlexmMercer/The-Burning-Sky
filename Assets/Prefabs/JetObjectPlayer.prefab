@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerForwardSpeed: 70
-  PlayerRotationSpeed: 750
+  PlayerRotationSpeed: 250
   PlayerSpeedCoefficient: 0.5
 --- !u!65 &5548532238507811803
 BoxCollider:
@@ -115,8 +115,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RestartPanel: {fileID: 0}
+  TimeValText: {fileID: 0}
+  TimerText: {fileID: 0}
+  MoneyValText: {fileID: 0}
   MissilesDestroyedNumber: {fileID: 0}
   gameManager: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+  GameTimer: {fileID: 0}
 --- !u!114 &5814760003130889727
 MonoBehaviour:
   m_ObjectHideFlags: 0

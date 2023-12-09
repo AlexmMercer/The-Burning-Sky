@@ -1204,7 +1204,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.83, y: 67.2, z: -34.54}
+  m_LocalPosition: {x: 1.83, y: 79.51, z: -34.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2474,8 +2474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinFactory: {fileID: 2132102565824535899}
-  numberOfCoins: 25
-  spawnRadius: 20
+  numberOfCoins: 3
+  spawnRadius: 40
   spawnInterval: 10
   playerTransform: {fileID: 1970981858}
 --- !u!114 &2132102565824535899
@@ -2638,6 +2638,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1108302915}
     - target: {fileID: 2822214079742737029, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: CurrentMoneyValText
+      value: 
+      objectReference: {fileID: 1683504045}
+    - target: {fileID: 2822214079742737029, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: MissilesDestroyedNumber
       value: 
       objectReference: {fileID: 1385104077}
@@ -2655,7 +2659,7 @@ PrefabInstance:
       objectReference: {fileID: 782628377}
     - target: {fileID: 5814760003130889727, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: spawnInterval
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7819628830520115965, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: PlayerForwardSpeed
@@ -2663,7 +2667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7819628830520115965, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: PlayerRotationSpeed
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7819628830520115965, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: PlayerSpeedCoefficient

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    //[SerializeField] GameManager PlayerGameManager;
     private float CoinLifeTime = 15.0f;
 
     private void OnTriggerEnter(Collider other)
