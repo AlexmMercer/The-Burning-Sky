@@ -7,13 +7,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject RestartPanel;
+    [SerializeField] GameObject PausePanel;
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
     public int coinsCollectedPerRound = 0;
     private float missilesDestroyedNumber;
     private int totalCoinsValue;
     void Start()
     {
+        Time.timeScale = 1.0f;
         RestartPanel.SetActive(false);
+        PausePanel.SetActive(false);
         ResetDestroyedMissilesNumber();
         coinsCollectedPerRound = 0;
     }
@@ -60,5 +63,17 @@ public class GameManager : MonoBehaviour
     public void ExitGame()
     {
         SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0.0f;
+        PausePanel.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1.0f;
+        PausePanel.SetActive(false);
     }
 }
