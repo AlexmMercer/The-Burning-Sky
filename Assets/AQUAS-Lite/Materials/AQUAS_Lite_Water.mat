@@ -78,11 +78,11 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Density: 0.067
+    - _Density: 0.957
     - _DepthTransparency: 0.2
     - _DetailNormalMapScale: 1
     - _DistanceFade: 0.5
-    - _Distortion: 0.02
+    - _Distortion: 0.189
     - _DstBlend: 0
     - _EnableCustomFog: 0
     - _EnableProbeRelfections: 1
@@ -91,28 +91,28 @@ Material:
     - _Fade: 2
     - _FarTilingDistance: 1000
     - _FoamBlend: 0.2
-    - _FoamContrast: 0.174
+    - _FoamContrast: 0.302
     - _FoamIntensity: 1.92
     - _FoamSpeed: 0.1
-    - _FoamTiling: 0.7
+    - _FoamTiling: 0.77
     - _FoamVisibility: 1
     - _FogDistance: 1000
     - _FogFade: 1
     - _FullTransparency: 0
     - _Gloss: 0.7
     - _Glossiness: 0.5
-    - _LightWrapping: 0
+    - _LightWrapping: 0.37
     - _MediumTilingDistance: 100
     - _Metallic: 0
     - _Mode: 0
-    - _NormalStrength: 0.96
-    - _NormalTiling: 0.12
+    - _NormalStrength: 1.65
+    - _NormalTiling: 0.36
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ProbeReflectionIntensity: 0.376
-    - _RealtimeReflectionIntensity: 0.208
+    - _ProbeReflectionIntensity: 0.486
+    - _RealtimeReflectionIntensity: 0.018
     - _ReflectionIntensity: 0.385
-    - _Refraction: 0.299
+    - _Refraction: 0.64
     - _RefractionDistance: 10
     - _RefractionFalloff: 1
     - _ShoreFade: 0.56
@@ -124,12 +124,12 @@ Material:
     - _UnderwaterMode: 0
     - _UnderwaterTranspDist: 13.56
     - _UnderwaterTranspFalloff: 0.78
-    - _WaveSpeed: 0.15
+    - _WaveSpeed: 0.3
     - _ZWrite: 1
     - __dirty: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepWaterColor: {r: 0.075614065, g: 0.37382764, b: 0.5566038, a: 1}
+    - _DeepWaterColor: {r: 0, g: 0.49986386, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _FogColor: {r: 1, g: 1, b: 1, a: 1}

@@ -22,4 +22,16 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(Vector3.up, PlayerRotationSpeed * horizontalInput * Time.deltaTime);
         PlayerForwardSpeed += PlayerSpeedCoefficient * Time.deltaTime;
     }
+
+    public void RotateJetLeft()
+    {
+        //horizontalInput = Input.GetAxis("Horizontal");
+        transform.Rotate(Vector3.up, -PlayerRotationSpeed * Time.deltaTime);
+    }
+
+    public void RotateJetRight()
+    {
+        //horizontalInput = Input.GetAxis("Horizontal");
+        transform.Rotate(Vector3.up, PlayerRotationSpeed * Time.deltaTime);
+    }
 }
