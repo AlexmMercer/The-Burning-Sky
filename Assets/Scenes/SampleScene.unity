@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 0}
+  m_AnchoredPosition: {x: -3, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &71565509
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0ac274da743a5ab49a17c782a85c7f2d, type: 3}
+  m_Texture: {fileID: 2800000, guid: 841ae3188ba4d9746ba4f4ed86597a98, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1257,6 +1257,81 @@ MonoBehaviour:
   spawnRadius1: 25
   spawnRadius2: 30
   playerTransform: {fileID: 1970981858}
+--- !u!1 &913341708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 913341709}
+  - component: {fileID: 913341711}
+  - component: {fileID: 913341710}
+  m_Layer: 5
+  m_Name: CoinImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &913341709
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913341708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.0607, y: 2.0607, z: 2.0607}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1480637101}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -794.4, y: 476.1}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &913341710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913341708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a64e61c767ecaed42a2969796386949c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &913341711
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913341708}
+  m_CullTransparentMesh: 1
 --- !u!1 &937358265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,6 +2645,7 @@ RectTransform:
   - {fileID: 1423981549}
   - {fileID: 1108302918}
   - {fileID: 586813642}
+  - {fileID: 913341709}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2907,7 +2983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0ac274da743a5ab49a17c782a85c7f2d, type: 3}
+  m_Texture: {fileID: 2800000, guid: 841ae3188ba4d9746ba4f4ed86597a98, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3364,6 +3440,22 @@ PrefabInstance:
     - target: {fileID: 3048755617885923633, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: m_Name
       value: JetObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548532238507811803, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_Size.x
+      value: 2.312515
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548532238507811803, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_Size.z
+      value: 4.219473
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548532238507811803, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_Center.x
+      value: -0.018536925
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548532238507811803, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_Center.z
+      value: 0.6618395
       objectReference: {fileID: 0}
     - target: {fileID: 5814760003130889727, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: m_Enabled

@@ -106,6 +106,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a581e11d233944c8e132e002fdab49, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7134925379581628948}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a581e11d233944c8e132e002fdab49, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7144478942867872435}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 28a581e11d233944c8e132e002fdab49, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3602104607602099167}
   m_SourcePrefab: {fileID: 100100000, guid: 28a581e11d233944c8e132e002fdab49, type: 3}
 --- !u!1 &3446389259246957112 stripped
 GameObject:
@@ -137,3 +143,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoinRotationSpeed: 100
+--- !u!65 &7144478942867872435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3446389259246957112}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 29.943447, y: 30.530731, z: 16.668718}
+  m_Center: {x: -0.50297445, y: 0.73987013, z: 0.5986858}
+--- !u!54 &3602104607602099167
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3446389259246957112}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

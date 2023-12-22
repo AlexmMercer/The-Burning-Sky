@@ -29,7 +29,7 @@ public class JetPlayer : MonoBehaviour
         } else if(other.TryGetComponent<Coin>(out var coin))
         {
             gameManager.coinsCollectedPerRound++;
-            CurrentMoneyValText.text = $"{gameManager.coinsCollectedPerRound} $";
+            CurrentMoneyValText.text = $"{gameManager.coinsCollectedPerRound}";
         }
     }
 }

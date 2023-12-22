@@ -11,7 +11,7 @@ public class MainMenuGameManager : MonoBehaviour
 
     private void Start()
     {
-        TotalCoinsText.text = $"{gameManager.getTotalCoinsValue()} $";
+        TotalCoinsText.text = $"{gameManager.getTotalCoinsValue()}";
     }
     public void PlayGame()
     {
