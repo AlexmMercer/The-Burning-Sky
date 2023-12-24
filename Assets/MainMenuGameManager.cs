@@ -13,6 +13,12 @@ public class MainMenuGameManager : MonoBehaviour
     {
         TotalCoinsText.text = $"{gameManager.getTotalCoinsValue()}";
     }
+
+    public void PlayClickSound()
+    {
+        gameObject.GetComponent<AudioSource>().Play();  
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene("SampleScene");

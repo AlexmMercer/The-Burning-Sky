@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
         return PlayerPrefs.GetInt("totalCoinsValue");
     }
 
+    public void PlayClickSound()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+    }
+
     public int GetDestroyedMissilesNumber()
     {
         return (int)missilesDestroyedNumber;

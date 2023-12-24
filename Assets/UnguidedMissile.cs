@@ -5,13 +5,29 @@ using UnityEngine;
 public class UnguidedMissile : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
-    private float missileFuelTime = 20.0f;
+    [SerializeField] SoundManager GameSoundManager;
+    [SerializeField] ParticleSystem ExplosionEffect;
+    private float missileFuelTime = 10.0f;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.TryGetComponent<UnguidedMissile>(out var unguidedMissile))
         {
-            Destroy(gameObject);
+           Instantiate(ExplosionEffect, transform.position,
+            Quaternion.identity);
+           ExplosionEffect.Play();
+           GameSoundManager.PlayExplosion();
+           Destroy(gameObject);
         }
+    }
+
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        // ???? ????????? ?????????? ???????
+        yield return new WaitForSeconds(delay);
+
+
+        // ?????????? ??????
+        Destroy(gameObject);
     }
 
     private void Update()
@@ -21,6 +37,7 @@ public class UnguidedMissile : MonoBehaviour
             missileFuelTime -= Time.deltaTime;
         } else
         {
+            GameSoundManager.PlayExplosion();
             Destroy(gameObject);
         }
     }

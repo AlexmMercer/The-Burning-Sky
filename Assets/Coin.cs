@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    public SoundManager GameSoundManager;
     private float CoinLifeTime = 15.0f;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.TryGetComponent<JetPlayer>(out var player))
         {
+            GameSoundManager.PlayCoinCollection();
             Destroy(gameObject);
         }
     }
@@ -24,5 +26,14 @@ public class Coin : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private IEnumerator DestroyAfterDelay(float delay)
+    {
+        // ???? ????????? ?????????? ???????
+        yield return new WaitForSeconds(delay);
+
+        // ?????????? ??????
+        Destroy(gameObject);
     }
 }
