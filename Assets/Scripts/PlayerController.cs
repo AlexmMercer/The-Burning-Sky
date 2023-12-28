@@ -9,11 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float PlayerSpeedCoefficient = 0.5f;
 
     private float horizontalInput;
-    private Animator animator;
-
-    private void Start()
-    {
-    }
 
     void Update()
     {
@@ -23,15 +18,4 @@ public class PlayerController : MonoBehaviour
         PlayerForwardSpeed += PlayerSpeedCoefficient * Time.deltaTime;
     }
 
-    public void RotateJetLeft()
-    {
-        //horizontalInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up, -PlayerRotationSpeed * Time.deltaTime);
-    }
-
-    public void RotateJetRight()
-    {
-        //horizontalInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up, PlayerRotationSpeed * Time.deltaTime);
-    }
 }
