@@ -3659,6 +3659,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1108302915}
     - target: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+      propertyPath: TurnLeftButton
+      value: 
+      objectReference: {fileID: 1003953477}
+    - target: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+      propertyPath: TurnRightButton
+      value: 
+      objectReference: {fileID: 1423981548}
+    - target: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
       propertyPath: MissilesDestroyedNumber
       value: 
       objectReference: {fileID: 0}

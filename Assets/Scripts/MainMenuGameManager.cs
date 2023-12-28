@@ -11,6 +11,7 @@ public class MainMenuGameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
         TotalCoinsText.text = $"{gameManager.getTotalCoinsValue()}";
     }
 
