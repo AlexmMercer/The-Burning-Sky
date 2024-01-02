@@ -21,7 +21,7 @@ public class JetPlayer : MonoBehaviour
     [SerializeField] Timer GameTimer;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.TryGetComponent<UnguidedMissile>(out var unguidedMissile))
+        if (other.TryGetComponent<GuidedMissile>(out var guidedMissile))
         {
             Instantiate(ExplosionEffect, transform.position,
                         Quaternion.identity);
@@ -39,16 +39,12 @@ public class JetPlayer : MonoBehaviour
             PauseButton.SetActive(false);
             RestartPanel.SetActive(true);
             GameTimer.HandlePlayerDeath();
-        } else if(other.TryGetComponent<Coin>(out var coin))
+        }
+        else if (other.TryGetComponent<Coin>(out var coin))
         {
             gameManager.coinsCollectedPerRound++;
             CurrentMoneyValText.text = $"{gameManager.coinsCollectedPerRound}";
         }
-    }
 
-    private IEnumerator DestroyAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        Destroy(gameObject);
     }
 }

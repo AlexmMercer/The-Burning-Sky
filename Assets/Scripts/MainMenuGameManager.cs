@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuGameManager : MonoBehaviour
 {
-    [SerializeField] GameManager gameManager;
+    [SerializeField] GameManager GameManager;
     [SerializeField] TextMeshProUGUI TotalCoinsText;
 
     private void Start()
     {
         Time.timeScale = 1.0f;
-        TotalCoinsText.text = $"{gameManager.getTotalCoinsValue()}";
+        TotalCoinsText.text = $"{GameManager.getTotalCoinsValue()}";
     }
 
     public void PlayClickSound()

@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
     public int coinsCollectedPerRound = 0;
     private float missilesDestroyedNumber;
-    private int totalCoinsValue;
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -28,7 +27,6 @@ public class GameManager : MonoBehaviour
         int newTotalCoinsValue = PlayerPrefs.GetInt("totalCoinsValue", 0);
         newTotalCoinsValue += valueToAdd;
         PlayerPrefs.SetInt("totalCoinsValue", newTotalCoinsValue);
-        //PlayerPrefs.Save();
     }
 
     public int getTotalCoinsValue()
@@ -54,12 +52,6 @@ public class GameManager : MonoBehaviour
     public void ResetDestroyedMissilesNumber()
     {
         missilesDestroyedNumber = 0.0f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ReloadLevel()

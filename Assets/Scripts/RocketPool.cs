@@ -59,9 +59,5 @@ public class RocketPool : MonoBehaviour
             rocket.GetComponent<UnguidedMissileController>().target = playerTransform;
             rocket.SetActive(true);
         }
-        else
-        {
-            Debug.LogWarning("??? ????????? ????? ? ????.");
-        }
     }
 }

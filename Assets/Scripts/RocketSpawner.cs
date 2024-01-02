@@ -27,7 +27,6 @@ public class RocketSpawner : MonoBehaviour
     private void SpawnRocket()
     {
         rocketPool.playerTransform = playerTransform;
-        //rocketPool.spawnRadius = spawnRadius;
         rocketPool.SpawnRocket();
     }
 }
