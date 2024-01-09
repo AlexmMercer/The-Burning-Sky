@@ -19,7 +19,7 @@ public class CreateClouds : MonoBehaviour
         for(int i = 0; i < CloudsNumber; i++)
         {
             cloudXCoord = Random.Range(-700, 700);
-            cloudYCoord = Random.Range(-700, 700);
+            cloudZCoord = Random.Range(-700, 700);
             Vector3 newCloudPosition = new Vector3(cloudXCoord, cloudYCoord, cloudZCoord);
             Instantiate(Cloud, newCloudPosition, Cloud.transform.rotation);
         }

@@ -6,10 +6,11 @@ public class GuidedMissile : MonoBehaviour
 {
     [SerializeField] SoundManager GameSoundManager;
     [SerializeField] ParticleSystem ExplosionEffect;
-    [SerializeField] float missileFuelTime = 10.0f;
+    [SerializeField] float missileFuelTime = 15.0f;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.TryGetComponent<GuidedMissile>(out var unguidedMissile))
+        if(other.gameObject.TryGetComponent<GuidedMissile>(out var unguidedMissile) ||
+            other.gameObject.TryGetComponent<Bullet>(out var bullet))
         {
            Instantiate(ExplosionEffect, transform.position,
             Quaternion.identity);
