@@ -10,7 +10,8 @@ public class GuidedMissile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.TryGetComponent<GuidedMissile>(out var unguidedMissile) ||
-            other.gameObject.TryGetComponent<Bullet>(out var bullet))
+            other.gameObject.TryGetComponent<Bullet>(out var bullet) || 
+            other.gameObject.TryGetComponent<PlayerUnguidedMissile>(out var playerUnguidedMissile))
         {
            Instantiate(ExplosionEffect, transform.position,
             Quaternion.identity);

@@ -4493,6 +4493,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1108302915}
     - target: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+      propertyPath: MissileButton
+      value: 
+      objectReference: {fileID: 991138572}
+    - target: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
       propertyPath: TurnLeftButton
       value: 
       objectReference: {fileID: 1003953477}
@@ -4964,6 +4968,10 @@ PrefabInstance:
       propertyPath: RestartPanel
       value: 
       objectReference: {fileID: 1108302915}
+    - target: {fileID: 2822214079742737029, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: MissileButton
+      value: 
+      objectReference: {fileID: 991138572}
     - target: {fileID: 2822214079742737029, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: GameSoundManager
       value: 

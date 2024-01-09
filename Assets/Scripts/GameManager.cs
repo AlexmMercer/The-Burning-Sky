@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject TurnLeftButton;
     [SerializeField] GameObject TurnRightButton;
     [SerializeField] GameObject MachineGunButton;
+    [SerializeField] GameObject MissileButton;
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
     public int coinsCollectedPerRound = 0;
     private float missilesDestroyedNumber;
@@ -71,6 +72,7 @@ public class GameManager : MonoBehaviour
         TurnLeftButton.SetActive(false);
         TurnRightButton.SetActive(false);
         MachineGunButton.SetActive(false);
+        MissileButton.SetActive(false);
         PausePanel.SetActive(true);
     }
 
@@ -80,6 +82,7 @@ public class GameManager : MonoBehaviour
         TurnLeftButton.SetActive(true);
         TurnRightButton.SetActive(true);
         MachineGunButton.SetActive(true);
+        MissileButton.SetActive(true);
         PausePanel.SetActive(false);
     }
 }

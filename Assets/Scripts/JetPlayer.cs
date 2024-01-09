@@ -15,6 +15,7 @@ public class JetPlayer : MonoBehaviour
     [SerializeField] GameObject RotateLeftButton;
     [SerializeField] GameObject RotateRightButton;
     [SerializeField] GameObject MachineGunButton;
+    [SerializeField] GameObject MissileButton;
     [SerializeField] GameObject PauseButton;
     [SerializeField] ParticleSystem ExplosionEffect;
     [SerializeField] SoundManager GameSoundManager;
@@ -38,6 +39,7 @@ public class JetPlayer : MonoBehaviour
             RotateLeftButton.SetActive(false);
             RotateRightButton.SetActive(false);
             MachineGunButton.SetActive(false);
+            MissileButton.SetActive(false);
             PauseButton.SetActive(false);
             RestartPanel.SetActive(true);
             GameTimer.HandlePlayerDeath();
