@@ -11,7 +11,7 @@ public class MissileLauncher : MonoBehaviour
     [SerializeField] TextMeshProUGUI MissilesLeftText;
 
     private List<GameObject> unguidedMissiles = new List<GameObject>();
-    private float missilePower = 50.0f;
+    private float missilePower = 70.0f;
 
     void Start()
     {

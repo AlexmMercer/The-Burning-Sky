@@ -16,7 +16,7 @@ public class MachineGunScript : MonoBehaviour
     private float timeCounterBetweenQueues = 0;
     private int bulletCounter = 0;
     private List<GameObject> bullets = new List<GameObject>();
-    private float shotPower = 70.0f;
+    private float shotPower = 90.0f;
 
     private void Start()
     {
