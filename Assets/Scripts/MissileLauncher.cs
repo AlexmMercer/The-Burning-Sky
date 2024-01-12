@@ -30,6 +30,20 @@ public class MissileLauncher : MonoBehaviour
         
     }
 
+    public void LaunchABarrageOfMissiles()
+    {
+        for (int i = 0; i < unguidedMissiles.Count; i++) 
+        {
+            StartCoroutine(LaunchMissileAfterDelay(0.05f));
+        }
+    }
+
+    private IEnumerator LaunchMissileAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        LaunchUnguidedMissile();
+    }
+
     public void LaunchUnguidedMissile()
     {
         if(unguidedMissiles.Count > 0)

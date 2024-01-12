@@ -365,7 +365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40, y: -300}
+  m_AnchoredPosition: {x: -0.0001335144, y: -29}
   m_SizeDelta: {x: 225, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &89228035
@@ -730,7 +730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -596, y: -300}
+  m_AnchoredPosition: {x: -636.0001, y: -29}
   m_SizeDelta: {x: 225, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259240602
@@ -875,7 +875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 677, y: -296}
+  m_AnchoredPosition: {x: 637, y: -25}
   m_SizeDelta: {x: 225, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335917233
@@ -1379,8 +1379,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 67, y: -107}
-  m_SizeDelta: {x: 1920, y: 1386.0961}
+  m_AnchoredPosition: {x: 67, y: -43.60443}
+  m_SizeDelta: {x: 1920, y: 1068.1615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &586813643
 MonoBehaviour:
@@ -1581,11 +1581,11 @@ Light:
   m_GameObject: {fileID: 705507993}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 4
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95179456, b: 0, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Color: {r: 1, g: 0.9846393, b: 0.67358494, a: 1}
+  m_Intensity: 15
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1625,7 +1625,7 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 10, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
@@ -2389,7 +2389,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8743191416934757973}
         m_TargetAssemblyTypeName: MissileLauncher, Assembly-CSharp
-        m_MethodName: LaunchUnguidedMissile
+        m_MethodName: LaunchABarrageOfMissiles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2742,8 +2742,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 721}
-  m_SizeDelta: {x: 0, y: -992.359}
+  m_AnchoredPosition: {x: 0, y: 683.40686}
+  m_SizeDelta: {x: 0, y: -658.851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049224222
 MonoBehaviour:
@@ -4772,9 +4772,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinFactory: {fileID: 2132102565824535899}
-  numberOfCoins: 3
+  numberOfCoins: 5
   spawnRadius: 40
-  spawnInterval: 10
+  spawnInterval: 15
   playerTransform: {fileID: 1970981858}
 --- !u!114 &2132102565824535899
 MonoBehaviour:
@@ -4899,7 +4899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cloud: {fileID: 3136379341874415622, guid: ecb86a8ea5654a044b7c0cc5c156bfaa, type: 3}
   Player: {fileID: 8743191416934757964}
-  CloudsNumber: 5000
+  CloudsNumber: 2100
 --- !u!1001 &3697438070200348455
 PrefabInstance:
   m_ObjectHideFlags: 0
