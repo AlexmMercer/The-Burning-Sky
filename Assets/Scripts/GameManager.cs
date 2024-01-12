@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,9 +17,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
     public int coinsCollectedPerRound = 0;
     private float missilesDestroyedNumber;
+    private int canUseMachineGun = 0;
+    private int canUseUnguidedMissiles = 0;
     void Start()
     {
         Time.timeScale = 1.0f;
+        Debug.Log(Convert.ToBoolean(canUseMachineGun));
+        MachineGunButton.SetActive(Convert.ToBoolean(PlayerPrefs.GetInt("canUseMachineGun", 0)));
+        MissileButton.SetActive(Convert.ToBoolean(PlayerPrefs.GetInt("canUseUnguidedMissiles", 0)));
         RestartPanel.SetActive(false);
         PausePanel.SetActive(false);
         ResetDestroyedMissilesNumber();
@@ -30,6 +36,26 @@ public class GameManager : MonoBehaviour
         int newTotalCoinsValue = PlayerPrefs.GetInt("totalCoinsValue", 0);
         newTotalCoinsValue += valueToAdd;
         PlayerPrefs.SetInt("totalCoinsValue", newTotalCoinsValue);
+    }
+
+    public void decreaseTotalCoinsValue(int valueToSubtract)
+    {
+        int newTotalCoinsValue = PlayerPrefs.GetInt("totalCoinsValue", 0);
+        newTotalCoinsValue -= valueToSubtract;
+        PlayerPrefs.SetInt("totalCoinsValue", newTotalCoinsValue);
+    }
+
+    public void allowToUseMachineGun()
+    {
+        int canUseM2 = PlayerPrefs.GetInt("canUseMachineGun", 0);
+        canUseM2 = 1;
+        PlayerPrefs.SetInt("canUseMachineGun", canUseM2);
+    }
+    public void allowToUseUnguidedMissiles()
+    {
+        int canUseUMissiles = PlayerPrefs.GetInt("canUseUnguidedMissiles", 0);
+        canUseUMissiles = 1;
+        PlayerPrefs.SetInt("canUseUnguidedMissiles", canUseUMissiles);
     }
 
     public int getTotalCoinsValue()

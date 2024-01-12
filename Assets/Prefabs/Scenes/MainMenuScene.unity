@@ -3099,7 +3099,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 852362759}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430816567}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyMachineGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &852362759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3369,7 +3381,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 889272657}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430816567}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyUnguidedMissiles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &889272657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6173,6 +6197,19 @@ MonoBehaviour:
   Cloud: {fileID: 3136379341874415622, guid: ecb86a8ea5654a044b7c0cc5c156bfaa, type: 3}
   Player: {fileID: 1637654148}
   NumberOfCloudsToSpawn: 25
+--- !u!114 &1430816567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260508853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873cec1c629d60944bd42bc736c3b3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainManager: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
 --- !u!1 &1439485588
 GameObject:
   m_ObjectHideFlags: 0
@@ -9493,9 +9530,29 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1652655259015579806, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485599895540588113, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3048755617885923633, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: m_Name
       value: JetObjectPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152991551731600927, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040786366022022992, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7055590143419446305, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7819628830520115965, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: m_Enabled
@@ -9511,6 +9568,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7819628830520115965, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: PlayerSpeedCoefficient
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476373806734288167, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9683,6 +9744,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 257911733}
     - target: {fileID: 6268547664128368812, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+    - target: {fileID: 6268547664128368812, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
       propertyPath: MainButtonMenu
       value: 
       objectReference: {fileID: 241677633}
@@ -9740,6 +9805,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 361417638351231112, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1430816565}
+    - targetCorrespondingSourceObject: {fileID: 361417638351231112, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1430816567}
   m_SourcePrefab: {fileID: 100100000, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
