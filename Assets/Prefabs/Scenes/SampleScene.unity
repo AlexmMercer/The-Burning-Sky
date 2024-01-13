@@ -548,6 +548,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25444af753bc0e745bd754d2d4e07afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freeLookEnabled: 1
+  showCursor: 1
+  lookSpeed: 5
+  moveSpeed: 5
+  sprintSpeed: 50
 --- !u!114 &970337662 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 910705460785402695, guid: f6a7ee4f8f244164fbc6d8ea0813ec4f, type: 3}
@@ -1363,6 +1368,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8743191416934757973}
+    - target: {fileID: 9035702124771229567, guid: f6a7ee4f8f244164fbc6d8ea0813ec4f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LaunchUnguidedMissile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

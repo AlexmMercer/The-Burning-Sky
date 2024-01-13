@@ -73,6 +73,23 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    public void BuyUnguidedMissile()
+    {
+        if (MainManager.getTotalCoinsValue() >= UnguidedMissilePrice)
+        {
+            MainManager.decreaseTotalCoinsValue(UnguidedMissilePrice);
+            MainManager.addUnguidedMissile(1);
+            Debug.Log("You have bought 1 unguided missile!");
+            Debug.Log($"Summary ammo: {MainManager.getSummaryUnguidedMissilesValue()}");
+            TotalCoinsText.text = $"{MainManager.getTotalCoinsValue()}";
+            TotalUnguidedMissilesText.text = $"{MainManager.getSummaryUnguidedMissilesValue()}";
+        }
+        else
+        {
+            Debug.Log("Not enough money to buy unguided missile.");
+        }
+    }
+
     public void ShowWeaponry()
     {
         WeaponryPanel.SetActive(true);
