@@ -69,6 +69,11 @@ public class GameManager : MonoBehaviour
         return PlayerPrefs.GetInt("SummaryAmmo");
     }
 
+    public int getSummaryUnguidedMissilesValue()
+    {
+        return PlayerPrefs.GetInt("SummaryUnguidedMissilesValue");
+    }
+
     public void setSummaryAmmoValue(int val)
     {
         PlayerPrefs.SetInt("SummaryAmmo", val);
@@ -81,6 +86,18 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("SummaryAmmo", currentAmmo);
     }
 
+    public void addUnguidedMissile(int valueToAdd)
+    {
+        if(PlayerPrefs.GetInt("SummaryUnguidedMissilesValue") +  valueToAdd <= 6) 
+        {
+            int currentUnguidedMissiles = PlayerPrefs.GetInt("SummaryUnguidedMissilesValue");
+            currentUnguidedMissiles += valueToAdd;
+            PlayerPrefs.SetInt("SummaryUnguidedMissilesValue", currentUnguidedMissiles);
+        } else
+        {
+            Debug.Log("Maximum unguided missiles limit achieved.");
+        }
+    }
     public void PlayClickSound()
     {
         gameObject.GetComponent<AudioSource>().Play();

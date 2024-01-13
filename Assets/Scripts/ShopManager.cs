@@ -17,6 +17,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] int M2BrowningPrice = 100;
     [SerializeField] int UnguidedMissileAbilityPrice = 200;
     [SerializeField] int AmmoM2BrowningPrice = 10;
+    [SerializeField] int UnguidedMissilePrice = 20;
     [SerializeField] GameObject Player;
 
 
