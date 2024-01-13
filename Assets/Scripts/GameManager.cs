@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
     public int coinsCollectedPerRound = 0;
     private float missilesDestroyedNumber;
+    //private int SummaryAmmo = 100;
     private int canUseMachineGun = 0;
     private int canUseUnguidedMissiles = 0;
     void Start()
@@ -60,7 +61,24 @@ public class GameManager : MonoBehaviour
 
     public int getTotalCoinsValue()
     {
-        return PlayerPrefs.GetInt("totalCoinsValue");
+        return PlayerPrefs.GetInt("totalCoinsValue", 0);
+    }
+
+    public int getSummaryAmmoValue()
+    {
+        return PlayerPrefs.GetInt("SummaryAmmo");
+    }
+
+    public void setSummaryAmmoValue(int val)
+    {
+        PlayerPrefs.SetInt("SummaryAmmo", val);
+    }
+
+    public void addAmmo(int valueToAdd)
+    {
+        int currentAmmo = PlayerPrefs.GetInt("SummaryAmmo");
+        currentAmmo += valueToAdd;
+        PlayerPrefs.SetInt("SummaryAmmo", currentAmmo);
     }
 
     public void PlayClickSound()

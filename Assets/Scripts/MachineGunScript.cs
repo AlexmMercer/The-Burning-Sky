@@ -8,8 +8,8 @@ public class MachineGunScript : MonoBehaviour
 {
     [SerializeField] GameObject Bullet;
     [SerializeField] GameObject Player;
+    [SerializeField] GameManager Manager;
     [SerializeField] TextMeshProUGUI AmmoLeftText;
-    [SerializeField] int SummaryAmmo;
     private float timeBetweenShots = 0.15f;
     private float timeBetweenQueues = 15.0f;
     private float timeCounterBetweenBullets = 0;
@@ -20,7 +20,7 @@ public class MachineGunScript : MonoBehaviour
 
     private void Start()
     {
-        AmmoLeftText.text = $"{SummaryAmmo}";
+        AmmoLeftText.text = $"{Manager.getSummaryAmmoValue()}";
     }
 
     void Update()
@@ -43,7 +43,7 @@ public class MachineGunScript : MonoBehaviour
 
     public void ShootMachineGun()
     {
-        if(SummaryAmmo > 0)
+        if(Manager.getSummaryAmmoValue() > 0)
         {
             GetComponent<AudioSource>().Play();
             GameObject bulletNew = Instantiate(Bullet);
@@ -52,10 +52,10 @@ public class MachineGunScript : MonoBehaviour
             //bulletNew.transform.rotation = Bullet.transform.rotation;
             bulletNew.transform.rotation = rotation;
             bulletNew.transform.SetParent(null);
-            SummaryAmmo--;
+            Manager.addAmmo(-1);
             bullets.Add(bulletNew);
             bulletNew.GetComponent<Rigidbody>().AddRelativeForce(Player.transform.right * shotPower, ForceMode.VelocityChange);
-            AmmoLeftText.text = $"{SummaryAmmo}";
+            AmmoLeftText.text = $"{Manager.getSummaryAmmoValue()}";
         }
     }
 }
