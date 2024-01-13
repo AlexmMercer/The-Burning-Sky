@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,9 @@ public class ShopManager : MonoBehaviour
     [SerializeField] GameObject AmmoPanel;
     [SerializeField] GameObject BuyM2Button;
     [SerializeField] GameObject BuyUnguidedMissilesButton;
+    [SerializeField] TextMeshProUGUI TotalCoinsText;
+    [SerializeField] TextMeshProUGUI TotalM2AmmoText;
+    [SerializeField] TextMeshProUGUI TotalUnguidedMissilesText;
     [SerializeField] int M2BrowningPrice = 100;
     [SerializeField] int UnguidedMissileAbilityPrice = 200;
     [SerializeField] int AmmoM2BrowningPrice = 10;
@@ -20,6 +24,8 @@ public class ShopManager : MonoBehaviour
     {
         WeaponryPanel.SetActive(true);
         AmmoPanel.SetActive(false);
+        TotalCoinsText.text = $"{MainManager.getTotalCoinsValue()}";
+        TotalM2AmmoText.text = $"{MainManager.getSummaryAmmoValue()}";
     }
     public void BuyMachineGun()
     {
@@ -59,6 +65,8 @@ public class ShopManager : MonoBehaviour
             MainManager.addAmmo(1);
             Debug.Log("You have bought 1 ammo for M2 'Browning' !");
             Debug.Log($"Summary ammo: {MainManager.getSummaryAmmoValue()}");
+            TotalCoinsText.text = $"{MainManager.getTotalCoinsValue()}";
+            TotalM2AmmoText.text = $"{MainManager.getSummaryAmmoValue()}";
         } else
         {
             Debug.Log("Not enough money to buy ammo.");

@@ -11065,6 +11065,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1202707681}
     - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      propertyPath: TotalCoinsText
+      value: 
+      objectReference: {fileID: 2034090592}
+    - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      propertyPath: TotalM2AmmoText
+      value: 
+      objectReference: {fileID: 1202587412}
+    - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
       propertyPath: BuyUnguidedMissilesButton
       value: 
       objectReference: {fileID: 889272654}
