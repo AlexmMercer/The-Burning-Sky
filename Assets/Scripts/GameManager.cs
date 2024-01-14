@@ -14,12 +14,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject MachineGunButton;
     [SerializeField] GameObject MissileButton;
     [SerializeField] GameObject Player;
+    [SerializeField] GameObject PlayerMissilePrefab;
     [SerializeField] TextMeshProUGUI MissilesDestroyedNumber;
     public int coinsCollectedPerRound = 0;
     private float missilesDestroyedNumber;
-    //private int SummaryAmmo = 100;
     private int canUseMachineGun = 0;
+    private int missilePositionIndex = 0;
     private int canUseUnguidedMissiles = 0;
+    private List<GameObject> playerUnguidedMissiles = new List<GameObject>();
     void Start()
     {
         Time.timeScale = 1.0f;
@@ -66,12 +68,30 @@ public class GameManager : MonoBehaviour
 
     public int getSummaryAmmoValue()
     {
-        return PlayerPrefs.GetInt("SummaryAmmo");
+        return PlayerPrefs.GetInt("SummaryAmmo", 0);
     }
 
     public int getSummaryUnguidedMissilesValue()
     {
-        return PlayerPrefs.GetInt("SummaryUnguidedMissilesValue");
+        return PlayerPrefs.GetInt("SummaryUnguidedMissilesValue", 0);
+    }
+
+    public List<GameObject> getUnguidedMissiles()
+    {
+        return playerUnguidedMissiles;
+    }
+
+    public void resetSummaryUnguidedMissilesValue()
+    {
+        PlayerPrefs.SetInt("SummaryUnguidedMissilesValue", 0);
+    }
+
+    public void increaseSummaryUnguidedMissilesValue()
+    {
+        if(getSummaryUnguidedMissilesValue() < 6)
+        {
+            PlayerPrefs.SetInt("SummaryUnguidedMissilesValue", getSummaryUnguidedMissilesValue() + 1);
+        }
     }
 
     public void setSummaryAmmoValue(int val)
@@ -86,17 +106,14 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("SummaryAmmo", currentAmmo);
     }
 
-    public void addUnguidedMissile(int valueToAdd)
+    public void addUnguidedMissile()
     {
-        if(PlayerPrefs.GetInt("SummaryUnguidedMissilesValue") +  valueToAdd <= 6) 
-        {
-            int currentUnguidedMissiles = PlayerPrefs.GetInt("SummaryUnguidedMissilesValue");
-            currentUnguidedMissiles += valueToAdd;
-            PlayerPrefs.SetInt("SummaryUnguidedMissilesValue", currentUnguidedMissiles);
-        } else
-        {
-            Debug.Log("Maximum unguided missiles limit achieved.");
-        }
+        if (missilePositionIndex >= 6) missilePositionIndex = 0;
+        GameObject[] missilePositions = GameObject.FindGameObjectsWithTag("MissileSlot");
+        var newMissile = Instantiate(PlayerMissilePrefab, missilePositions[missilePositionIndex].transform.position, PlayerMissilePrefab.transform.rotation);
+        newMissile.transform.SetParent(missilePositions[missilePositionIndex].transform);
+        playerUnguidedMissiles.Add(newMissile);
+        missilePositionIndex++;
     }
     public void PlayClickSound()
     {

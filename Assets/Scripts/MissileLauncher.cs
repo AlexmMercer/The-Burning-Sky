@@ -9,19 +9,34 @@ public class MissileLauncher : MonoBehaviour
 {
 
     [SerializeField] TextMeshProUGUI MissilesLeftText;
+    [SerializeField] GameManager MainManager;
+    [SerializeField] GameObject UnguidedMissilePrefab;
 
     private List<GameObject> unguidedMissiles = new List<GameObject>();
     private float missilePower = 70.0f;
 
     void Start()
     {
+        int unguidedMissilesNumber = MainManager.getSummaryUnguidedMissilesValue();
+        List<Transform> missileSlots = new List<Transform>();
+
         foreach(Transform obj in transform)
         {
-            if(obj.tag == "PlayerUnguidedMissile")
+            if(obj.tag == "MissileSlot")
             {
-                unguidedMissiles.Add(obj.gameObject);
+                missileSlots.Add(obj);
             }
         }
+        Debug.Log(missileSlots.Count);
+        for(int i = 0; i < unguidedMissilesNumber; i++)
+        {
+            var missileUnguidedNew = Instantiate(UnguidedMissilePrefab, missileSlots[i].transform.position, UnguidedMissilePrefab.transform.rotation);
+            missileUnguidedNew.AddComponent<Rigidbody>();
+            missileUnguidedNew.GetComponent<Rigidbody>().useGravity = false;
+            missileUnguidedNew.transform.SetParent(missileSlots[i]);
+            unguidedMissiles.Add(missileUnguidedNew);
+        }
+        Debug.Log(unguidedMissilesNumber);
         MissilesLeftText.text = $"{unguidedMissiles.Count}";
     }
 

@@ -45,3 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RestartPanel: {fileID: 0}
+  PausePanel: {fileID: 0}
+  TurnLeftButton: {fileID: 0}
+  TurnRightButton: {fileID: 0}
+  MachineGunButton: {fileID: 0}
+  MissileButton: {fileID: 0}
+  Player: {fileID: 3048755617885923633, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+  PlayerMissilePrefab: {fileID: 1568565468613769049, guid: 0235c9bc7f5d6f740aa2710cb5b74e84, type: 3}
+  MissilesDestroyedNumber: {fileID: 0}
+  coinsCollectedPerRound: 0

@@ -6237,7 +6237,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1281990776}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430816567}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: BuyUnguidedMissile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1281990776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10871,7 +10883,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3839384203290539515, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
@@ -11069,13 +11082,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2034090592}
     - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      propertyPath: M2BrowningPrice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
       propertyPath: TotalM2AmmoText
       value: 
       objectReference: {fileID: 1202587412}
     - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      propertyPath: AmmoM2BrowningPrice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      propertyPath: UnguidedMissilePrice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
       propertyPath: BuyUnguidedMissilesButton
       value: 
       objectReference: {fileID: 889272654}
+    - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      propertyPath: TotalUnguidedMissilesText
+      value: 
+      objectReference: {fileID: 269936127}
+    - target: {fileID: 1595057352360486341, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
+      propertyPath: UnguidedMissileAbilityPrice
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6268547664128368812, guid: bd0dd677d7b6a7040867b7677db8c000, type: 3}
       propertyPath: ShopMenu
       value: 

@@ -859,6 +859,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 601139910}
     - target: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
+      propertyPath: PlayerMissilePrefab
+      value: 
+      objectReference: {fileID: 1568565468613769049, guid: 0235c9bc7f5d6f740aa2710cb5b74e84, type: 3}
+    - target: {fileID: 7512959693753159016, guid: 26f19d2f2a9491b40a149c230bce64da, type: 3}
       propertyPath: MissilesDestroyedNumber
       value: 
       objectReference: {fileID: 0}
@@ -1584,9 +1588,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 782628377}
     - target: {fileID: 7869964140766678067, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: MainManager
+      value: 
+      objectReference: {fileID: 2132102565824535894}
+    - target: {fileID: 7869964140766678067, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
       propertyPath: MissilesLeftText
       value: 
       objectReference: {fileID: 1644907834}
+    - target: {fileID: 7869964140766678067, guid: 474ce28b1b97e7f49b719ea115e2f0f4, type: 3}
+      propertyPath: UnguidedMissilePrefab
+      value: 
+      objectReference: {fileID: 1568565468613769049, guid: 0235c9bc7f5d6f740aa2710cb5b74e84, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

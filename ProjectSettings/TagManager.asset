@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerUnguidedMissile
   - Cloud
+  - MissileSlot
+  - BusyMissileSlot
   layers:
   - Default
   - TransparentFX
