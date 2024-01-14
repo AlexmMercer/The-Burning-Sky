@@ -8,6 +8,7 @@ public class MainMenuGameManager : MonoBehaviour
 {
     [SerializeField] GameManager GameManager;
     [SerializeField] GameObject ShopMenu;
+    [SerializeField] GameObject ControlMenu;
     [SerializeField] GameObject MainButtonMenu;
     [SerializeField] GameObject HintPanel;
     [SerializeField] TextMeshProUGUI TotalCoinsText;
@@ -17,6 +18,7 @@ public class MainMenuGameManager : MonoBehaviour
         Time.timeScale = 1.0f;
         HintPanel.SetActive(false);
         ShopMenu.SetActive(false);
+        ControlMenu.SetActive(false);
         TotalCoinsText.text = $"{GameManager.getTotalCoinsValue()}";
     }
 
@@ -55,5 +57,15 @@ public class MainMenuGameManager : MonoBehaviour
     public void ClosePlayHint()
     {
         HintPanel.SetActive(false);
+    }
+
+    public void ShowSettingsPanel()
+    {
+        ControlMenu.SetActive(true);
+    }
+
+    public void CloseSettingsPanel()
+    {
+        ControlMenu.SetActive(false);
     }
 }
