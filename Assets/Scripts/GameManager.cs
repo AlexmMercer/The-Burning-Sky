@@ -135,6 +135,15 @@ public class GameManager : MonoBehaviour
         missilesDestroyedNumber = 0.0f;
     }
 
+
+    public void DecreaseDestroyedMissilesNumber()
+    {
+        if(getSummaryUnguidedMissilesValue() > 0)
+        {
+            PlayerPrefs.SetInt("SummaryUnguidedMissilesValue", getSummaryUnguidedMissilesValue() - 1);
+        }
+    }
+
     public void ReloadLevel()
     {
         SceneManager.LoadScene("SampleScene");

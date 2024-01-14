@@ -69,6 +69,7 @@ public class MissileLauncher : MonoBehaviour
             missileNew.transform.Find("UnguidedMissileEngineFire 1").gameObject.SetActive(true);
             unguidedMissiles.RemoveAt(unguidedMissiles.Count - 1);
             MissilesLeftText.text = $"{unguidedMissiles.Count}";
+            MainManager.DecreaseDestroyedMissilesNumber();
             missileNew.GetComponent<Rigidbody>().AddRelativeForce(transform.up * missilePower, ForceMode.VelocityChange);
         } else
         {
