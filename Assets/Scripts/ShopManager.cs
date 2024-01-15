@@ -15,9 +15,16 @@ public class ShopManager : MonoBehaviour
     [SerializeField] GameObject BuyUnguidedMissilesAmmoButton;
     [SerializeField] AudioClip ApprovedSound;
     [SerializeField] AudioClip DeniedSound;
+    [SerializeField] AudioClip ApprovedSound1;
+    [SerializeField] AudioClip DeniedSound1;
+    [SerializeField] AudioClip ApprovedSound2;
+    [SerializeField] AudioClip DeniedSound2;
+    [SerializeField] AudioClip ApprovedSound3;
+    [SerializeField] AudioClip DeniedSound3;
     [SerializeField] TextMeshProUGUI TotalCoinsText;
     [SerializeField] TextMeshProUGUI TotalM2AmmoText;
     [SerializeField] TextMeshProUGUI TotalUnguidedMissilesText;
+    [SerializeField] TextMeshProUGUI MainCoinText;
     [SerializeField] int M2BrowningPrice = 100;
     [SerializeField] int UnguidedMissileAbilityPrice = 200;
     [SerializeField] int AmmoM2BrowningPrice = 10;
@@ -40,6 +47,7 @@ public class ShopManager : MonoBehaviour
             MainManager.allowToUseMachineGun();
             MainManager.setSummaryAmmoValue(10);
             Debug.Log("You have bought M2 Browning!");
+            MainCoinText.text = $"{MainManager.getTotalCoinsValue()}";
             PurchaseM2Approved();
         } else
         {
@@ -55,6 +63,7 @@ public class ShopManager : MonoBehaviour
             MainManager.decreaseTotalCoinsValue(UnguidedMissileAbilityPrice);
             MainManager.allowToUseUnguidedMissiles();
             PurchaseUnguidedMissilesApproved();
+            MainCoinText.text = $"{MainManager.getTotalCoinsValue()}";
             Debug.Log("You have bought unguided missiles!");
         }
         else
@@ -77,6 +86,7 @@ public class ShopManager : MonoBehaviour
                 Debug.Log($"Summary ammo: {MainManager.getSummaryAmmoValue()}");
                 TotalCoinsText.text = $"{MainManager.getTotalCoinsValue()}";
                 TotalM2AmmoText.text = $"{MainManager.getSummaryAmmoValue()}";
+                MainCoinText.text = $"{MainManager.getTotalCoinsValue()}";
             }
             else
             {
@@ -100,6 +110,7 @@ public class ShopManager : MonoBehaviour
                 Debug.Log($"Summary unguided missiles number: {MainManager.getSummaryUnguidedMissilesValue()}");
                 TotalCoinsText.text = $"{MainManager.getTotalCoinsValue()}";
                 TotalUnguidedMissilesText.text = $"{MainManager.getSummaryUnguidedMissilesValue()}";
+                MainCoinText.text = $"{MainManager.getTotalCoinsValue()}";
             }
             else
             {
@@ -137,32 +148,32 @@ public class ShopManager : MonoBehaviour
 
     public void PurchaseUnguidedMissilesApproved()
     {
-        BuyUnguidedMissilesButton.GetComponent<AudioSource>().clip = ApprovedSound;
+        BuyUnguidedMissilesButton.GetComponent<AudioSource>().clip = ApprovedSound1;
     }
 
     public void UnguidedMissilesPurchaseDenied()
     {
-        BuyUnguidedMissilesButton.GetComponent<AudioSource>().clip = DeniedSound;
+        BuyUnguidedMissilesButton.GetComponent<AudioSource>().clip = DeniedSound1;
     }
 
     public void PurchaseM2AmmoApproved()
     {
-        BuyM2AmmoButton.GetComponent<AudioSource>().clip = ApprovedSound;
+        BuyM2AmmoButton.GetComponent<AudioSource>().clip = ApprovedSound2;
     }
 
     public void M2AmmoPurchaseDenied()
     {
-        BuyM2AmmoButton.GetComponent<AudioSource>().clip = DeniedSound;
+        BuyM2AmmoButton.GetComponent<AudioSource>().clip = DeniedSound2;
     }
 
     public void PurchaseUnguidedMissileAmmoApproved()
     {
-      BuyUnguidedMissilesAmmoButton.GetComponent<AudioSource>().clip = ApprovedSound;
+      BuyUnguidedMissilesAmmoButton.GetComponent<AudioSource>().clip = ApprovedSound3;
     }
 
     public void UnguidedMissileAmmoPurchaseDenied()
     {
-      BuyUnguidedMissilesAmmoButton.GetComponent<AudioSource>().clip = DeniedSound;
+      BuyUnguidedMissilesAmmoButton.GetComponent<AudioSource>().clip = DeniedSound3;
     }
 
     public void M2AmmoBuyButtonClickSound()

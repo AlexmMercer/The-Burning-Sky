@@ -38,18 +38,13 @@ public class MissileLauncher : MonoBehaviour
         MissilesLeftText.text = $"{unguidedMissiles.Count}";
     }
 
-    void Update()
-    {
-        
-    }
-
-    public void LaunchABarrageOfMissiles()
+/*    public void LaunchABarrageOfMissiles()
     {
         for (int i = 0; i < unguidedMissiles.Count; i++) 
         {
             //StartCoroutine(LaunchMissileAfterDelay(0.00f));
         }
-    }
+    }*/
 
     private IEnumerator LaunchMissileAfterDelay(float delay)
     {

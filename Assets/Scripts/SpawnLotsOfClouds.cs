@@ -14,7 +14,6 @@ public class SpawnLotsOfClouds : MonoBehaviour
     private float cloudYCoord;
     private float cloudZCoord;
 
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("SpawnClouds", 0.0f, 3.0f);
