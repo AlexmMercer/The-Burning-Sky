@@ -11,6 +11,10 @@ public class ShopManager : MonoBehaviour
     [SerializeField] GameObject AmmoPanel;
     [SerializeField] GameObject BuyM2Button;
     [SerializeField] GameObject BuyUnguidedMissilesButton;
+    [SerializeField] GameObject BuyM2AmmoButton;
+    [SerializeField] GameObject BuyUnguidedMissilesAmmoButton;
+    [SerializeField] AudioClip ApprovedSound;
+    [SerializeField] AudioClip DeniedSound;
     [SerializeField] TextMeshProUGUI TotalCoinsText;
     [SerializeField] TextMeshProUGUI TotalM2AmmoText;
     [SerializeField] TextMeshProUGUI TotalUnguidedMissilesText;
@@ -36,10 +40,11 @@ public class ShopManager : MonoBehaviour
             MainManager.allowToUseMachineGun();
             MainManager.setSummaryAmmoValue(10);
             Debug.Log("You have bought M2 Browning!");
-            BuyM2Button.GetComponent<Button>().enabled = false;
+            PurchaseM2Approved();
         } else
         {
             Debug.Log("Not enough money to buy MachineGun!");
+            M2PurchaseDenied();
         }
     }
 
@@ -49,28 +54,35 @@ public class ShopManager : MonoBehaviour
         {
             MainManager.decreaseTotalCoinsValue(UnguidedMissileAbilityPrice);
             MainManager.allowToUseUnguidedMissiles();
+            PurchaseUnguidedMissilesApproved();
             Debug.Log("You have bought unguided missiles!");
-            BuyUnguidedMissilesButton.GetComponent<Button>().enabled = false;
         }
         else
         {
+            UnguidedMissilesPurchaseDenied();
             Debug.Log("Not enough money to buy unguided missiles!");
         }
     }
 
     public void BuyAmmoForMachineGun()
     {
-        if(MainManager.getTotalCoinsValue() >= AmmoM2BrowningPrice)
+        if(MainManager.getSummaryAmmoValue() < 50)
         {
-            MainManager.decreaseTotalCoinsValue(AmmoM2BrowningPrice);
-            MainManager.addAmmo(1);
-            Debug.Log("You have bought 1 ammo for M2 'Browning' !");
-            Debug.Log($"Summary ammo: {MainManager.getSummaryAmmoValue()}");
-            TotalCoinsText.text = $"{MainManager.getTotalCoinsValue()}";
-            TotalM2AmmoText.text = $"{MainManager.getSummaryAmmoValue()}";
-        } else
-        {
-            Debug.Log("Not enough money to buy ammo.");
+            if (MainManager.getTotalCoinsValue() >= AmmoM2BrowningPrice)
+            {
+                MainManager.decreaseTotalCoinsValue(AmmoM2BrowningPrice);
+                MainManager.addAmmo(1);
+                PurchaseM2AmmoApproved();
+                Debug.Log("You have bought 1 ammo for M2 'Browning' !");
+                Debug.Log($"Summary ammo: {MainManager.getSummaryAmmoValue()}");
+                TotalCoinsText.text = $"{MainManager.getTotalCoinsValue()}";
+                TotalM2AmmoText.text = $"{MainManager.getSummaryAmmoValue()}";
+            }
+            else
+            {
+                Debug.Log("Not enough money to buy ammo.");
+                M2AmmoPurchaseDenied();
+            }
         }
     }
 
@@ -82,6 +94,7 @@ public class ShopManager : MonoBehaviour
             {
                 MainManager.decreaseTotalCoinsValue(UnguidedMissilePrice);
                 MainManager.increaseSummaryUnguidedMissilesValue();
+                PurchaseUnguidedMissileAmmoApproved();
                 MainManager.addUnguidedMissile();
                 Debug.Log("You have bought 1 unguided missile!");
                 Debug.Log($"Summary unguided missiles number: {MainManager.getSummaryUnguidedMissilesValue()}");
@@ -90,12 +103,13 @@ public class ShopManager : MonoBehaviour
             }
             else
             {
+                UnguidedMissileAmmoPurchaseDenied();
                 Debug.Log("Not enough money to buy unguided missile.");
             }
-        } else
+        }
+        else
         {
-            MainManager.resetSummaryUnguidedMissilesValue();
-            Debug.Log(MainManager.getSummaryUnguidedMissilesValue());
+            Debug.Log("Unguided missiles limit achieved.");
         }
     }
 
@@ -109,5 +123,65 @@ public class ShopManager : MonoBehaviour
     {
         WeaponryPanel.SetActive(false);
         AmmoPanel.SetActive(true);
+    }
+
+    public void PurchaseM2Approved()
+    {
+        BuyM2Button.GetComponent<AudioSource>().clip = ApprovedSound;
+    }
+
+    public void M2PurchaseDenied()
+    {
+        BuyM2Button.GetComponent<AudioSource>().clip = DeniedSound;
+    }
+
+    public void PurchaseUnguidedMissilesApproved()
+    {
+        BuyUnguidedMissilesButton.GetComponent<AudioSource>().clip = ApprovedSound;
+    }
+
+    public void UnguidedMissilesPurchaseDenied()
+    {
+        BuyUnguidedMissilesButton.GetComponent<AudioSource>().clip = DeniedSound;
+    }
+
+    public void PurchaseM2AmmoApproved()
+    {
+        BuyM2AmmoButton.GetComponent<AudioSource>().clip = ApprovedSound;
+    }
+
+    public void M2AmmoPurchaseDenied()
+    {
+        BuyM2AmmoButton.GetComponent<AudioSource>().clip = DeniedSound;
+    }
+
+    public void PurchaseUnguidedMissileAmmoApproved()
+    {
+      BuyUnguidedMissilesAmmoButton.GetComponent<AudioSource>().clip = ApprovedSound;
+    }
+
+    public void UnguidedMissileAmmoPurchaseDenied()
+    {
+      BuyUnguidedMissilesAmmoButton.GetComponent<AudioSource>().clip = DeniedSound;
+    }
+
+    public void M2AmmoBuyButtonClickSound()
+    {
+        BuyM2AmmoButton.GetComponent<AudioSource>().Play();
+    }
+
+    public void UnguidedMissileAmmoBuyButtonClickSound()
+    {
+        BuyM2AmmoButton.GetComponent<AudioSource>().Play();
+    }
+
+    public void BuyM2ButtonPlaySound()
+    {
+        BuyM2Button.GetComponent<AudioSource>().Play();
+    }
+
+    public void BuyUnguidedMissilesPlaySound()
+    {
+        BuyUnguidedMissilesButton.GetComponent<AudioSource>().Play();
     }
 }

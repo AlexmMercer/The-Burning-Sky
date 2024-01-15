@@ -31,8 +31,6 @@ public class MissileLauncher : MonoBehaviour
         for(int i = 0; i < unguidedMissilesNumber; i++)
         {
             var missileUnguidedNew = Instantiate(UnguidedMissilePrefab, missileSlots[i].transform.position, UnguidedMissilePrefab.transform.rotation);
-            missileUnguidedNew.AddComponent<Rigidbody>();
-            missileUnguidedNew.GetComponent<Rigidbody>().useGravity = false;
             missileUnguidedNew.transform.SetParent(missileSlots[i]);
             unguidedMissiles.Add(missileUnguidedNew);
         }
@@ -65,6 +63,8 @@ public class MissileLauncher : MonoBehaviour
         {
             GameObject missileNew = unguidedMissiles[unguidedMissiles.Count - 1];
             missileNew.transform.SetParent(null);
+            missileNew.AddComponent<Rigidbody>();
+            missileNew.GetComponent<Rigidbody>().useGravity = false;
             missileNew.GetComponent<AudioSource>().Play();
             missileNew.transform.Find("UnguidedMissileEngineFire 1").gameObject.SetActive(true);
             unguidedMissiles.RemoveAt(unguidedMissiles.Count - 1);
